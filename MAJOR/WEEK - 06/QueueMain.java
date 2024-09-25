@@ -6,7 +6,7 @@ public class QueueMain {
         Queue q = new Queue(5);
         int choice = 0;
 
-        while (choice != 4) {
+        while (choice != 5) {
             System.out.print("\n1.Add\n" + "2.Delete\n" + "3.Print\n" + "4.Exit\n" + "Choose Operation: ");
             choice = sc.nextInt();
 
@@ -30,5 +30,7 @@ public class QueueMain {
                     break;
             }
         }
+
+        sc.close();
     }
 }

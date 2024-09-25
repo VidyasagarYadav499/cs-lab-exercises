@@ -8,6 +8,8 @@ public class SumOfDigits {
         int num = input.nextInt();
         int sum = 0;
 
+        input.close();
+
         while (num != 0) {
             sum = sum + num % 10;
             num = num / 10;

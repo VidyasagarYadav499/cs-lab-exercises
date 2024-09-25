@@ -9,7 +9,9 @@ public class HCFandLCM {
         Scanner input = new Scanner(System.in);
         int a = input.nextInt();
         int b = input.nextInt();
-        
+
+        input.close();
+
         for (int i = 1; i <= a; i++) {
             if (a % i == 0 && b % i == 0) {
                 hcf = i;
@@ -19,6 +21,6 @@ public class HCFandLCM {
         lcm = (a * b) / hcf;
         System.out.println("LCM: " + lcm);
         System.out.println("HCF: " + hcf);
-        
+
     }
 }

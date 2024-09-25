@@ -6,12 +6,13 @@ public class ArrayMain {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int arr[] = {2, 5, 10, 45, 100, 200, 456};
+        int arr[] = { 2, 5, 10, 45, 100, 200, 456 };
         System.out.println("arr[] = {2, 5, 10, 45, 100, 200, 456};");
 
         int exit = 1;
         while (exit != 0) {
-            System.out.println("Choose Operation(integer): " + "\n" + " 1. sum" + "\n" + " 2. Average" + "\n" + " 3. min" + "\n" + " 4. max" + "\n" + " 5. exit");
+            System.out.println("Choose Operation(integer): " + "\n" + " 1. sum" + "\n" + " 2. Average" + "\n"
+                    + " 3. min" + "\n" + " 4. max" + "\n" + " 5. exit");
             int op = input.nextInt();
 
             switch (op) {
@@ -34,6 +35,9 @@ public class ArrayMain {
                     System.out.println("Invalid operation" + "\n");
                     break;
             }
+
+            input.close();
+
         }
     }
 }

@@ -7,6 +7,8 @@ public class PrimeNum {
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();
 
+        input.close();
+
         if (num < 2) {
             System.out.println("not a prime!");
             return;

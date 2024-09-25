@@ -1,8 +1,6 @@
-
 import java.util.Scanner;
 
 public class Palindrome {
-
     public static void main(String[] args) {
 
         int rev = 0;
@@ -10,6 +8,8 @@ public class Palindrome {
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();
         int numcopy = num;
+
+        input.close();
 
         while (num != 0) {
             rev = rev * 10 + num % 10;

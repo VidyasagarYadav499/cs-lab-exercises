@@ -5,10 +5,13 @@ public class PrimeNumsInRange {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter start: ");
         int start = sc.nextInt();
-        if (start < 2) start = 2;
+        if (start < 2)
+            start = 2;
 
         System.out.print("Enter end: ");
         int end = sc.nextInt();
+
+        sc.close();
 
         for (int i = start; i < end; i++) {
             if (isPrime(i)) {
@@ -18,9 +21,11 @@ public class PrimeNumsInRange {
     }
 
     private static boolean isPrime(int num) {
-        if (num < 2) return false;
+        if (num < 2)
+            return false;
         for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) return false;
+            if (num % i == 0)
+                return false;
         }
 
         return true;

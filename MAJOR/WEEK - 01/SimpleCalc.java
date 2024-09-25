@@ -1,8 +1,6 @@
-
 import java.util.Scanner;
 
 public class SimpleCalc {
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("a: ");
@@ -34,5 +32,6 @@ public class SimpleCalc {
                 System.out.println("not a valid operation");
         }
 
+        input.close();
     }
 }

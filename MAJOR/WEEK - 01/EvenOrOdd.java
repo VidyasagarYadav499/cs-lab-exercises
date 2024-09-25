@@ -12,5 +12,7 @@ public class EvenOrOdd {
         } else {
             System.out.println("odd");
         }
+
+        input.close();
     }
 }
