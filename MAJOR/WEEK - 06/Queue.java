@@ -18,34 +18,33 @@ public class Queue {
         }
 
         if (front == -1) {
-            front = 0;
+            qArr[++front] = value;
+            rear++;
+        } else {
+            rear++;
+            qArr[rear] = value;
         }
-
-        rear++;
-        qArr[rear] = value;
     }
 
     public void dequeue() {
-        if (front == -1 || front > rear) {
-            System.out.println("Queue is empty! Deletion not possible!");
-            return;
+        if (front > rear || rear == -1) {
+            System.out.println("Queue is empty. Deletion not possible!");
         }
 
         front++;
 
-        if (front > rear) {
+        if (front >rear) {
             front = rear = -1;
         }
     }
 
     public void print() {
-        if (front == -1) {
+        if (rear == -1) {
             System.out.println("Queue is empty!");
             return;
         }
         for (int i = front; i <= rear; i++) {
             System.out.print(qArr[i] + " ");
         }
-        System.out.println();
     }
 }

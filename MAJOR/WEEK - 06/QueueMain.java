@@ -30,7 +30,7 @@ public class QueueMain {
                     break;
             }
         }
-
+        
         sc.close();
     }
 }
