@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-#define SIZE 500000
+#define SIZE 1245
 
 int main(){
 	int arr[SIZE];
@@ -30,7 +30,7 @@ int main(){
 		arr[i] = (i + 1);
 	}
 
-	#pragma omp parallel for reduction(+:sum)
+	#pragma omp parallel for reduction(+:sum) private(i)
 	for(i = 0; i < SIZE; i++){
 		sum += arr[i];
 	}

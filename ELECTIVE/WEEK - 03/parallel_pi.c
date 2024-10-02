@@ -4,7 +4,8 @@
 int main() {
     double value = 0.0;
     
-    for (int i = 1; i <= 1000000; i++) {
+    #pragma omp parallel for reduction (+:value)
+    for (long long i = 1; i <= 1000000000; i++) {
         if (i % 2 != 0) {
             value += 1.0 / (2 * i - 1);
         } else {
@@ -12,7 +13,7 @@ int main() {
         }
     }
     
-    printf("%0.15f", 4 * value);
+    printf("%0.20f", 4 * value);
     return 0;
 }
 

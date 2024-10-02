@@ -1,27 +1,27 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+// #include <math.h>
 
 #define UPPER_BOUND 1
-#define RANGE 100000000
+#define RANGE 10000000
+#define SEED 100000
 
-int main() 
+void main()
 {
     srand(time(NULL));
+    // srand(SEED);
 
-    int circle_points = 0, square_points = 0;
+    double circle_points = 0, square_points = 0;
 
-    for (int i = 0; i < RANGE; i++)
+    for (size_t i = 0; i < RANGE; i++)
     {
-        // double x = (double)rand() / RAND_MAX;
-        // double y = (double)rand() / RAND_MAX; 
-
         double x = (double)(rand() % (UPPER_BOUND + 1));
         double y = (double)(rand() % (UPPER_BOUND + 1));
 
         double value = x * x + y * y;
 
-        if (value <= 1.0)
+        if (value <= 1)
         {
             circle_points++;
         }
@@ -29,9 +29,7 @@ int main()
         square_points++;
     }
 
-    double pi = ((double)circle_points / square_points) * 4;
+    double pi = (circle_points / square_points) * 4;
 
-    printf("%f\n", pi);
-
-    return 0; 
+    printf("%f", pi);
 }

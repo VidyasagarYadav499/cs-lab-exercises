@@ -6,7 +6,7 @@ void fibo(int n) {
     int i;
     printf("%ld\n", a);
 
-    if (n > 1) {
+    if (n > 1){
         printf("%ld\n", b);
         #pragma omp parallel private(i)
         {
@@ -25,8 +25,8 @@ void fibo(int n) {
     }
 }
 
-//int main() {
-    int n = 40; 
+int main() {
+    int n = 50; 
     fibo(n);
     return 0;
 }
