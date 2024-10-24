@@ -3,7 +3,7 @@
 #include <time.h>
 #include <omp.h> 
 
-#define SIZE 100000000
+#define SIZE 100
 
 int main() {
 	clock_t start = clock();
@@ -15,7 +15,7 @@ int main() {
     }
     
     
-    omp_set_num_threads(16);
+    omp_set_num_threads(4);
     
     #pragma omp parallel for
     for (long int i = 0; i < SIZE; i++) {

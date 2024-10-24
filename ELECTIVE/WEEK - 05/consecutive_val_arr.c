@@ -1,39 +1,49 @@
-7#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>
 #include <omp.h>
 
-#define SIZE 100000000 
-
 int main() {
-    long int* arr = (long int *)malloc(SIZE * sizeof(long int));
-    if (arr == NULL) {
-        printf("Memory allocation failed!\n");
-        return 1; 
+    const int N = 100; 
+    int arr[N];
+    int start_idx = 0;
+    int last_idx;       
+    
+//    for(int i = 0; i < N; i++) {
+//        arr[i] = i + 1;
+//    }
+    
+    
+    #pragma omp parallel firstprivate(start_idx)
+    {
+        int thread_id = omp_get_thread_num();
+        int num_threads = omp_get_num_threads();
+        int chunk_size = N / num_threads;
+        
+        start_idx = thread_id * chunk_size;
+        
+        #pragma omp for lastprivate(last_idx) nowait
+        for(int i = 0; i < N; i++) {
+            
+            arr[i] = i + 1;
+            last_idx = arr[i]; 
+        }
+        
+        printf("Thread %d: processed indices %d to %d\n", 
+               thread_id, start_idx, start_idx + chunk_size - 1);
     }
     
-    int num_threads = 16;
-    omp_set_num_threads(num_threads);
+    printf("\nLast index processed (from lastprivate): %d\n", last_idx);
     
-    #pragma omp parallel firstprivate(num_threads) lastprivate(arr)
-    {
-        long int tid = omp_get_thread_num();
-        long int start_value = tid * (SIZE / num_threads) + 1;
-        long int end_value = (tid + 1) * (SIZE / num_threads);
-
-        for (long int i = start_value; i <= end_value; i++) {
-            arr[i - 1] = i; 
-        }
-
-        long int last_value = end_value;
-        #pragma omp critical
-        {
-            arr[SIZE - 1] = last_value;
-        }
-    } 
+    printf("\nfirst 5 values: ");
+    for(int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     
-    printf("Last initialized value: %ld\n", arr[SIZE - 1]);
-
-    free(arr);
+    printf("last 5 values: ");
+    for(int i = N-5; i < N; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    
     return 0;
 }
-

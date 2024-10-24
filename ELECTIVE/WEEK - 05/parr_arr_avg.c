@@ -6,7 +6,7 @@
 #define SIZE 100000000
 
 int main() {
-    clock_t start = clock();
+    double start = omp_get_wtime();
     
     long int* arr = (long int *)malloc(SIZE * sizeof(long int));
     if (arr == NULL) {
@@ -14,7 +14,7 @@ int main() {
         return 1;
     }
 
-    omp_set_num_threads(2); // Setting the number of threads
+    omp_set_num_threads(2);
     
     #pragma omp parallel for
     for (long int i = 0; i < SIZE; i++) {
@@ -29,8 +29,8 @@ int main() {
 
     double average = (double)sum / SIZE;
 
-    clock_t end = clock();
-    double time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+    double end = omp_get_wtime();
+    double time_taken = end - start;
 
     printf("Time taken: %.5f secs\n", time_taken);
     printf("Average: %.5f\n", average);
