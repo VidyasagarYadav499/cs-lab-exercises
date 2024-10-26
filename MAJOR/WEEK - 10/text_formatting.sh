@@ -1,4 +1,6 @@
-# Text formatting
+### Text formatting ###
+
+# Resources: https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters
 
 CLEAR="\e[0m" # Resets the text formating to default.
 
