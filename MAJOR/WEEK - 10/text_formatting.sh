@@ -4,7 +4,7 @@
 ### Text formatting ###
 
 # Reset the text formatting to default settings.
-CLEAR="\e[0m" 
+CLEAR="\e[0m"  		    # Can also be written like this: CLEAR="\033[0m"
 
 # Text settings for various styles.
 BOLD="\e[1m"                # Makes text bold.
@@ -74,25 +74,25 @@ WHITE_BG_BOLD="\e[1;47m"    # Bold white background.
 
 # Use the defined variables to format terminal output.
 # Example 1: Displaying a message in bold green text.
-echo -e "${GREEN_BOLD}This is a bold green message.${CLEAR}"
+# echo -e "${GREEN_BOLD}This is a bold green message.${CLEAR}"
 
 # Example 2: Displaying a warning in yellow text with a red background.
-echo -e "${YELLOW}Warning: An error has occurred!${RED_BG}${CLEAR}"
+# echo -e "${YELLOW}Warning: An error has occurred!${RED_BG}${CLEAR}"
 
 # Example 3: Displaying a success message in bold green with a blue background.
-echo -e "${GREEN_BOLD}Success!${BLUE_BG}${CLEAR}"
+# echo -e "${GREEN_BOLD}Success!${BLUE_BG}${CLEAR}"
 
 # Example 4: Displaying underlined text.
-echo -e "${UNDERLINE}This text is underlined.${CLEAR}"
+# echo -e "${UNDERLINE}This text is underlined.${CLEAR}"
 
 # Example 5: Displaying hidden text (might not be visible).
-echo -e "${HIDDEN}This text is hidden and not visible.${CLEAR}"
+# echo -e "${HIDDEN}This text is hidden and not visible.${CLEAR}"
 
 # Example 6: Combining effects to create bold and underlined text.
-echo -e "${BOLD_UNDERLINE}This text is bold and underlined.${CLEAR}"
+# echo -e "${BOLD_UNDERLINE}This text is bold and underlined.${CLEAR}"
 
 # Example 7: Strikethrough effect.
-echo -e "${STRIKETHROUGH}This text has a strikethrough.${CLEAR}"
+# echo -e "${STRIKETHROUGH}This text has a strikethrough.${CLEAR}"
 
 ### End of Usage Examples ###
 
@@ -100,48 +100,48 @@ echo -e "${STRIKETHROUGH}This text has a strikethrough.${CLEAR}"
 
 ### Additional Information ###
 
-# 1. **Terminal Support**: 
+# 1. **Terminal Support**:
 # Not all terminals support all ANSI codes. Most modern terminal emulators, such as xterm, gnome-terminal, and Windows Terminal, do support these codes. However, the display of certain effects, like blinking, can vary.
 
-# 2. **Combining Effects**: 
+# 2. **Combining Effects**:
 # You can combine styles by using semicolons. For example:
 BOLD_UNDERLINE="\e[1;4m"   # Creates bold and underlined text.
 
-# 3. **Custom Color Support**: 
+# 3. **Custom Color Support**:
 # Some terminals support 256-color mode, allowing for more customization with colors. You can specify these colors with codes ranging from `0` to `255` in the format `\e[38;5;{color_code}m` for foreground and `\e[48;5;{color_code}m` for background. 
 # Example of 256 color:
-echo -e "\e[38;5;82mThis is a custom green from the 256 color palette.${CLEAR}"
+# echo -e "\e[38;5;82mThis is a custom green from the 256 color palette.${CLEAR}"
 
 # 4. **Best Practices**: 
 # Always reset the formatting after displaying styled text by including the `CLEAR` variable to avoid affecting subsequent text. For example:
-echo -e "${GREEN}This will be green${CLEAR} and this will be normal."
+# echo -e "${GREEN}This will be green${CLEAR} and this will be normal."
 
 # 5. **Cross-Platform Compatibility**: 
 # If your script is intended to run on different operating systems, keep in mind that some may require different handling of ANSI codes. For instance, Windows traditionally did not support these codes in the Command Prompt but has improved support in PowerShell and Windows Terminal.
 
 # 6. **Color Customization**: 
 # You can create your own functions or variables to encapsulate color choices for ease of use, such as:
-set_color() {
-  echo -e "\e[$1m"
-}
+# set_color() {
+#  echo -e "\e[$1m"
+# }
 
 # Example usage: set_color "32" to set text color to green.
 
-# 7. **Performance Considerations**: 
+# 7. **Performance Considerations**:
 # If you are executing many formatted outputs in a script, consider minimizing the number of escape sequences for performance. Batch your outputs when possible to reduce the overhead.
 
-# 8. **Compatibility Check**: 
+# 8. **Compatibility Check**:
 # To check if your terminal supports ANSI codes, you can run a simple command:
-if [[ $TERM == "xterm"* || $TERM == "screen"* || $TERM == "linux" ]]; then
-  echo -e "${GREEN}Your terminal supports ANSI escape codes!${CLEAR}"
-else
-  echo -e "${RED}Your terminal may not support ANSI escape codes.${CLEAR}"
-fi
+# if [[ $TERM == "xterm"* || $TERM == "screen"* || $TERM == "linux" ]]; then
+#  echo -e "${GREEN}Your terminal supports ANSI escape codes!${CLEAR}"
+# else
+#  echo -e "${RED}Your terminal may not support ANSI escape codes.${CLEAR}"
+# fi
 
 # 9. **Testing Script**: 
 # Create a simple testing script to visualize how each effect looks:
-for color in {30..37} {90..97}; do
-  echo -e "\e[${color}mColor ${color}\e[0m"
-done
+# for color in {30..37} {90..97}; do
+#   echo -e "\e[${color}mColor ${color}\e[0m"
+# done
 
 ### End of additional information ###

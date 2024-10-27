@@ -6,7 +6,9 @@
 # ‘three’ make it blink on the screen. If a wrong argument is
 # supplied report it. (Hint: Use an elif statement)
 
-source ~/bash_scripting/text_formatting.sh
+# source ~/bash_scripting/text_formatting.sh
+
+. ~/bash_scripting/text_formatting.sh
 
 read -p "Enter 'one', 'two' or 'three': " str
 
@@ -15,7 +17,7 @@ if [ "$str" = "one" ]; then
 elif [ "$str" = "two" ]; then
 	echo "two" | rev
 elif [ "$str" = "three" ]; then
-	echo -e "\033[1;5;31mthree${CLEAR}"
-else echo -e "${RED_BOLD}ERROR:${CLEAR} Wrong argument -> '$str' provided!"
-
+	echo -e "\e[5mthree${CLEAR}"
+else
+	echo -e "\e[1;5;7;31m ERROR: ${CLEAR} Wrong argument -> '$str' provided!"
 fi
