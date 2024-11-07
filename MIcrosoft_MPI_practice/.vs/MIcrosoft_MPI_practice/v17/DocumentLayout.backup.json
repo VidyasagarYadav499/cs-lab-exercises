@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|solutionrelative:w8q2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w7q3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|solutionrelative:w7q3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FFCA13BB-484E-41DD-AE64-CA84057775B5}|MIcrosoft_MPI_practice.vcxproj|solutionrelative:w8q1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\main.c*",
+              "RelativeToolTip": "main.c*",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-07T01:56:57.296Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "w8q2.c",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q2.c",
+              "RelativeDocumentMoniker": "w8q2.c",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q2.c",
+              "RelativeToolTip": "w8q2.c",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-07T02:28:06.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "w8q1.c",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q1.c",
+              "RelativeDocumentMoniker": "w8q1.c",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w8q1.c",
+              "RelativeToolTip": "w8q1.c",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-07T02:25:20.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "w7q3.c",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w7q3.c",
+              "RelativeDocumentMoniker": "w7q3.c",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\MIcrosoft_MPI_practice\\w7q3.c",
+              "RelativeToolTip": "w7q3.c",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-07T02:01:49.193Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
