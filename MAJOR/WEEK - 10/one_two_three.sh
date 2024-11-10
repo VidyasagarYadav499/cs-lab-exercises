@@ -8,16 +8,16 @@
 
 # source ~/bash_scripting/text_formatting.sh
 
-. ~/bash_scripting/text_formatting.sh
+# . ~/bash_scripting/text_formatting.sh
 
 read -p "Enter 'one', 'two' or 'three': " str
 
 if [ "$str" = "one" ]; then
-	echo -e "${BOLD}one${CLEAR}"
+	echo -e "\033[1mone\033[0m"
 elif [ "$str" = "two" ]; then
 	echo "two" | rev
 elif [ "$str" = "three" ]; then
-	echo -e "\e[5mthree${CLEAR}"
+	echo -e "\033[5mthree\033[0m"
 else
-	echo -e "\e[1;5;7;31m ERROR: ${CLEAR} Wrong argument -> '$str' provided!"
+	echo -e "\e[1;5;7;31m ERROR: \033[0m Wrong argument -> '$str' provided!"
 fi
