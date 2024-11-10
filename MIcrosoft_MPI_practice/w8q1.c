@@ -10,7 +10,7 @@
 //    MPI_Comm_size(MPI_COMM_WORLD, &size);
 //
 //    const int root = 0;
-//    const int n = 5;
+//    const int n = 2;
 //    int* data = NULL;
 //    int local_data;
 //

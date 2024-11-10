@@ -141,6 +141,7 @@
     <ClCompile Include="w7q3.c" />
     <ClCompile Include="w8q2.c" />
     <ClCompile Include="w8q3.c" />
+    <ClCompile Include="w9q1.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
